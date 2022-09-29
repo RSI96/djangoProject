@@ -1,0 +1,18 @@
+{% extends 'main.html' %}
+
+{% block title %}About{% endblock title %}
+
+{% block content %}
+
+<div>
+    <h1>---About page---</h1>
+    <br>
+    <h3>HTML view</h3>
+    <div>
+        {% for story in stories %}
+        <div>{{story.id}} -- <a href="{% url 'story' story.id %}">{{story.name}}</a></div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock content %}

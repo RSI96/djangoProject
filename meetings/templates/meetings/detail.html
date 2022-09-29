@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+
+{% block title %}Detail{% endblock title %}
+
+{% block content %}
+
+
+<h1>le detail</h1>
+<p>Name: {{meeting.title}}</p>
+<p>Date: {{meeting.date}}</p>
+<p>Start Time: {{meeting.startTime}}</p>
+<p>Duration: {{meeting.duration}}</p>
+<br>
+<p><a href="{% url 'meetingsHome' %}">All meetings</a></p>
+
+{% endblock content %}
